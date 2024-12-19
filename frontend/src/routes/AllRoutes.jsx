@@ -1,6 +1,6 @@
 import React from 'react';
 import { Routes, Route } from 'react-router-dom';
-import { Dashbord, HomePage, WritePost } from '../pages';
+import { Dashbord, HomePage, WritePost, UserAuthForm } from '../pages';
 
 export default function AllRoutes() {
   return (
@@ -8,8 +8,8 @@ export default function AllRoutes() {
       <Route path="/" element={<HomePage />} />
       <Route path="dashbord" element={<Dashbord />} />
       <Route path="writepost" element={<WritePost />} />
-      <Route path="signin" element={<WritePost />} />
-      <Route path="signup" element={<WritePost />} />
+      <Route path="signin" element={<UserAuthForm type={'sign-in'} />} />
+      <Route path="signup" element={<UserAuthForm type={'sign-up'} />} />
     </Routes>
   );
 }
