@@ -55,7 +55,7 @@ export function UserAuthForm({ type }) {
               </span>
             </button>
             <div className="flex justify-between items-center text-center text-gray-500 dark:text-gray-200">
-              <hr className="w-1/2 mr-2 " />
+              <hr className="w-1/2 mr-2" />
               Or
               <hr className="w-1/2 ml-2" />
             </div>

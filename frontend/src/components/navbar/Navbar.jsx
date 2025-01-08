@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { Link, NavLink } from 'react-router-dom';
-import Logo from '../../assets/logo.svg';
-import { AnimationWrapper } from '../../Animation';
+import Logo from '/assets/logo.svg';
+import { AnimationWrapper, AnimationBorder } from '../../Animation';
 
 export function Navbar() {
   const [hidden, setHidden] = useState(false);
@@ -28,7 +28,7 @@ export function Navbar() {
   }, [darkMode]);
 
   return (
-    <nav className="bg-white border-gray-200 dark:bg-gray-900">
+    <nav className="bg-white border-gray-200 dark:bg-gray-900 border-b border-gray-300 ">
       <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
         <Link
           to="/"
@@ -253,25 +253,65 @@ export function Navbar() {
 
           <ul className="flex flex-col p-4 md:p-0 mt-4 font-medium border border-gray-100 rounded-lg bg-gray-50 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
             <li>
-              <NavLink
-                to="/"
-                className={({ isActive }) =>
-                  isActive ? activeUl : notActiveUl
-                }
-                aria-current="page"
-              >
-                Home
-              </NavLink>
+              <AnimationBorder>
+                <NavLink
+                  to="/"
+                  className={({ isActive }) =>
+                    isActive ? activeUl : notActiveUl
+                  }
+                  aria-current="page"
+                >
+                  Home
+                </NavLink>
+              </AnimationBorder>
             </li>
             <li>
-              <NavLink
-                to={'/writepost'}
-                className={({ isActive }) =>
-                  isActive ? activeUl : notActiveUl
-                }
-              >
-                Write Post
-              </NavLink>
+              <AnimationBorder>
+                <NavLink
+                  to={'/about'}
+                  className={({ isActive }) =>
+                    isActive ? activeUl : notActiveUl
+                  }
+                >
+                  About
+                </NavLink>
+              </AnimationBorder>
+            </li>
+            <li>
+              <AnimationBorder>
+                <NavLink
+                  to={'/blog'}
+                  className={({ isActive }) =>
+                    isActive ? activeUl : notActiveUl
+                  }
+                >
+                  Blogs
+                </NavLink>
+              </AnimationBorder>
+            </li>
+            <li>
+              <AnimationBorder>
+                <NavLink
+                  to={'/contact'}
+                  className={({ isActive }) =>
+                    isActive ? activeUl : notActiveUl
+                  }
+                >
+                  Contact Us
+                </NavLink>
+              </AnimationBorder>
+            </li>
+            <li>
+              <AnimationBorder>
+                <NavLink
+                  to={'/writepost'}
+                  className={({ isActive }) =>
+                    isActive ? activeUl : notActiveUl
+                  }
+                >
+                  Write Post
+                </NavLink>
+              </AnimationBorder>
             </li>
           </ul>
         </div>

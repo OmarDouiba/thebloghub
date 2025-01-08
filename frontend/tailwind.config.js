@@ -3,9 +3,8 @@ export default {
   content: ['./src/**/*.{html,js,jsx,ts}'],
   darkMode: 'class',
   theme: {
-    extend: {},
     container: {
-      center: true,
+      center: true, 
     },
   },
   plugins: [],
