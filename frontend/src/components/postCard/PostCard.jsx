@@ -1,38 +1,58 @@
 import React from 'react';
-import { NavLink } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
-export function PostCard({ Image, tag, title, author, date, fun }) {
+export function PostCard({ posts, currPage, selectedCategory, pageSize }) {
+  const filteredPosts = posts
+    .filter((post) => !selectedCategory || post.category === selectedCategory)
+    .slice((currPage - 1) * pageSize, currPage * pageSize);
   return (
-    <div
-      className="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 p-4"
-      onClick={() => fun()}
-    >
-      <a href="#">
-        <img className="rounded-lg" src={Image} alt="post image" />
-      </a>
-      <div className="py-5 px-3">
-        {/* Tag */}
-        <div className="bg-blue-100 inline-block px-2 py-1 rounded-full mb-3">
-          <span className="text-[#4B6BFB]">{tag}</span>
-        </div>
-        <a href="#">
-          <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
-            {title}
-          </h5>
-        </a>
-        {/* Author and Date */}
-        <div className="flex items-center space-x-4">
-          <a className="flex items-center space-x-3">
-            <img
-              className="w-8 h-8 rounded-full"
-              src={Image}
-              alt="Author Tracey Wilson"
-            />
-            <p className="text-gray-500">{author}</p>
-          </a>
-          <p className="text-gray-500">{date}</p>
-        </div>
-      </div>
-    </div>
+    <>
+      <Link className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+        {filteredPosts.map((post) => (
+          <div
+            key={post.id}
+            className="max-w-sm bg-white border border-gray-200 rounded-lg shadow-md dark:bg-gray-800 dark:border-gray-500 p-4 flex flex-col justify-between"
+          >
+            {/* Post Image */}
+            <a href="#">
+              <img
+                className="w-full rounded-lg h-48 object-cover"
+                src={post.image}
+                alt={post.title}
+              />
+            </a>
+
+            {/* Post Content */}
+            <div className="p-4 flex flex-col flex-grow">
+              {/* Category Tag */}
+              <div className="mb-2">
+                <span className="bg-blue-100 text-blue-600 text-xs font-medium px-2 py-1 rounded-full">
+                  {post.category}
+                </span>
+              </div>
+
+              {/* Post Title */}
+              <a href="#">
+                <h5 className="text-lg font-semibold text-gray-800 dark:text-gray-300 hover:underline ">
+                  {post.title}
+                </h5>
+              </a>
+            </div>
+
+            {/* Author Section */}
+            <div className="flex items-center justify-start mt-4 border-t pt-4">
+              <img
+                className="w-8 h-8 rounded-full"
+                src={post.image}
+                alt={post.author}
+              />
+              <span className="ml-2 text-sm font-medium text-gray-500 dark:text-gray-400">
+                {post.author}
+              </span>
+            </div>
+          </div>
+        ))}
+      </Link>
+    </>
   );
 }

@@ -1,0 +1,55 @@
+import React, { useEffect, useState } from 'react';
+import { PostCard } from './PostCard';
+import { Pagination } from './Pagination';
+
+export function PostsPage() {
+  const [posts, setPosts] = useState([]);
+  const [currPage, setCurrPage] = useState(1);
+  const [selectedCategory, setSelectedCategory] = useState(null);
+  const pageSize = 12;
+  const [activeCategory, setActiveCategory] = useState(null);
+
+  async function fetchPosts(page = 1, category = '') {
+    let url = `http://localhost:3000/posts?page=${page}$limit=${pageSize}`;
+    try {
+      if (selectedCategory) {
+        url += `&category=${selectedCategory}`;
+      }
+      const response = await fetch(url);
+      const data = await response.json();
+      setPosts(data);
+    } catch (error) {
+      console.error('Error fetching posts:', error);
+    }
+  }
+
+  useEffect(() => {
+    fetchPosts();
+  }, [currPage, selectedCategory, pageSize]);
+
+  const handlePageChange = (pageNumber) => {
+    setCurrPage(pageNumber);
+  };
+
+  const handleCategoryChange = (category) => {
+    setSelectedCategory(category);
+    setCurrPage(1);
+    setActiveCategory(category);
+  };
+
+  return (
+    <div className="flex items-center flex-col py-5">
+      <div>
+        <PostCard
+          posts={posts}
+          currPage={currPage}
+          selectedCategory={selectedCategory}
+          pageSize={pageSize}
+        />
+      </div>
+      <div>
+        <Pagination />
+      </div>
+    </div>
+  );
+}
