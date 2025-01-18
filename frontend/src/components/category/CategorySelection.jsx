@@ -18,8 +18,8 @@ export function CategorySelection({
   ];
 
   return (
-    <div className="bg-white shadow rounded-lg p-6 mb-4 dark:bg-gray-800 dark:border dark:border-gray-700">
-      <ul className="flex flex-wrap gap-4">
+    <div className="bg-white shadow rounded-lg p-6 mb-4 dark:bg-gray-800 dark:border dark:border-gray-700 flex justify-center">
+      <ul className="flex flex-wrap sm:flex-col gap-4">
         {/* "All" Button */}
         <li>
           <button

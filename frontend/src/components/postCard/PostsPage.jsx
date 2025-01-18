@@ -39,8 +39,8 @@ export function PostsPage() {
   };
 
   return (
-    <div className="py-5">
-      <div className='pb-5'>
+    <div className="sm:flex py-5">
+      <div className="pb-5 pr-5">
         <CategorySelection
           onSelectCategory={handleCategoryChange}
           selectedCategory={selectedCategory}
