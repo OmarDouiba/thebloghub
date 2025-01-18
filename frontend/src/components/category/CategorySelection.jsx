@@ -19,9 +19,6 @@ export function CategorySelection({
 
   return (
     <div className="bg-white shadow rounded-lg p-6 mb-4 dark:bg-gray-800 dark:border dark:border-gray-700">
-      <h3 className="text-lg font-semibold text-gray-800 mb-4 dark:text-white">
-        Category Selection
-      </h3>
       <ul className="flex flex-wrap gap-4">
         {/* "All" Button */}
         <li>
