@@ -32,7 +32,7 @@ export function Pagination({ onPageChange, currPage, posts, pageSize }) {
     ));
 
   return (
-    <div className="flex items-center justify-between px-4 py-3 sm:px-6">
+    <div className="flex items-center justify-between px-4 pt-8 sm:px-6">
       {/* Mobile View Pagination */}
       <div className="flex flex-1 justify-between sm:hidden">
         <button
