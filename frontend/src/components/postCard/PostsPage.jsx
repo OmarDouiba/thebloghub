@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { PostCard } from './PostCard';
 import { Pagination } from './Pagination';
+import { CategorySelection } from '../category/CategorySelection';
 
 export function PostsPage() {
   const [posts, setPosts] = useState([]);
@@ -38,17 +39,31 @@ export function PostsPage() {
   };
 
   return (
-    <div className="flex items-center flex-col py-5">
-      <div>
-        <PostCard
-          posts={posts}
-          currPage={currPage}
+    <div className="py-5">
+      <div className='pb-5'>
+        <CategorySelection
+          onSelectCategory={handleCategoryChange}
           selectedCategory={selectedCategory}
-          pageSize={pageSize}
+          activeCategory={activeCategory}
         />
       </div>
-      <div>
-        <Pagination />
+      <div className="flex items-center flex-col">
+        <div>
+          <PostCard
+            posts={posts}
+            currPage={currPage}
+            selectedCategory={selectedCategory}
+            pageSize={pageSize}
+          />
+        </div>
+        <div>
+          <Pagination
+            onPageChange={handlePageChange}
+            currPage={currPage}
+            posts={posts}
+            pageSize={pageSize}
+          />
+        </div>
       </div>
     </div>
   );
