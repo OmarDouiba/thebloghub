@@ -57,10 +57,12 @@ export function SinglePost() {
           className="w-full h-96 my-10 rounded-lg"
           alt={data.title}
         />
-        <p className="text-lg">{data.content}</p>
+        <p className="text-lg text-gray-600 mt-4 text-start">{data.content}</p>
 
-        <h2 className="text-3xl font-bold my-5">lorem lorem lorem</h2>
-        <p className="text-lg">
+        <h2 className="text-3xl font-bold text-gray-800 my-5">
+          lorem lorem lorem
+        </h2>
+        <p className="text-lg text-gray-600 mt-4 text-start">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam
           tenetur reiciendis asperiores! Nesciunt architecto at hic libero modi
           dolorem quas possimus placeat vitae doloribus consequuntur, aut
@@ -100,8 +102,10 @@ export function SinglePost() {
           placeat nobis voluptatum vero. Molestias soluta dolores cumque?
         </p>
 
-        <h2 className="text-3xl font-bold my-5">lorem lorem lorem</h2>
-        <p className="text-lg">
+        <h2 className="text-3xl font-bold text-gray-800 my-5">
+          lorem lorem lorem
+        </h2>
+        <p className="text-lg text-gray-600 mt-4 text-start">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam
           tenetur reiciendis asperiores! Nesciunt architecto at hic libero modi
           dolorem quas possimus placeat vitae doloribus consequuntur, aut
@@ -141,8 +145,10 @@ export function SinglePost() {
           placeat nobis voluptatum vero. Molestias soluta dolores cumque?
         </p>
 
-        <h2 className="text-3xl font-bold my-5">lorem lorem lorem</h2>
-        <p className="text-lg">
+        <h2 className="text-3xl font-bold text-gray-800 my-5">
+          lorem lorem lorem
+        </h2>
+        <p className="text-text-lg text-gray-600 mt-4 text-start">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam
           tenetur reiciendis asperiores! Nesciunt architecto at hic libero modi
           dolorem quas possimus placeat vitae doloribus consequuntur, aut
@@ -187,7 +193,7 @@ export function SinglePost() {
         >
           {data?.tags?.map((tag) => (
             <span
-              key={tag.id || tag} 
+              key={tag.id || tag}
               className="rounded-md bg-gray-200 text-black text-md font-semibold px-3 py-2"
               role="listitem"
             >

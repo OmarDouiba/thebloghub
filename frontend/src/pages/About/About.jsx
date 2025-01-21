@@ -21,7 +21,9 @@ export function About() {
           </header>
 
           <section className="mb-16">
-            <h2 className="text-3xl font-bold text-gray-800">What We Do</h2>
+            <h2 className="text-3xl text-start font-bold text-gray-800">
+              What We Do
+            </h2>
             <p className="text-lg text-gray-600 mt-4 text-start">
               Our blog is a hub of diverse content, carefully curated to cater
               to readers from all walks of life. From personal growth and
@@ -33,7 +35,9 @@ export function About() {
           </section>
 
           <section className="mb-16">
-            <h2 className="text-3xl font-bold text-gray-800">Our Vision</h2>
+            <h2 className="text-3xl text-start font-bold text-gray-800">
+              Our Vision
+            </h2>
             <p className="text-lg text-gray-600 mt-4 text-start">
               We envision a world where information is accessible, ideas flow
               freely, and communities are built through shared experiences and
@@ -44,7 +48,9 @@ export function About() {
           </section>
 
           <section className="mb-16">
-            <h2 className="text-3xl font-bold text-gray-800">Our Team</h2>
+            <h2 className="text-3xl text-start font-bold text-gray-800">
+              Our Team
+            </h2>
             <p className="text-lg text-gray-600 mt-4 text-start">
               Behind The Blog Hub is a passionate team of writers, editors, and
               creators dedicated to crafting engaging and thought-provoking
@@ -56,7 +62,9 @@ export function About() {
           </section>
 
           <section className="mb-16">
-            <h2 className="text-3xl font-bold text-gray-800">Why Choose Us?</h2>
+            <h2 className="text-3xl text-start font-bold text-gray-800">
+              Why Choose Us?
+            </h2>
             <ul className="list-inside list-disc mt-4 text-lg text-gray-600 text-start">
               <li>
                 Quality Content: Our articles are written with care, offering
@@ -77,7 +85,7 @@ export function About() {
             </ul>
           </section>
 
-          <section className="text-center mt-16">
+          <section className="text-start mt-16">
             <h2 className="text-3xl font-bold text-gray-800">Join Us</h2>
             <p className="text-lg text-gray-600 mt-4 text-start">
               At The Blog Hub, we don’t just want you to read; we want you to be
