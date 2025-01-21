@@ -5,5 +5,6 @@ export { PostCard } from './postCard/PostCard';
 export { PostsPage } from './postCard/PostsPage';
 export { Pagination } from './postCard/Pagination';
 export { CategorySelection } from './category/CategorySelection';
+// export { SinglePostComponent } from './singlePostComponent/SinglePostComponent';
 
 export { Hero } from './Hero/Hero';

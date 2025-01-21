@@ -7,20 +7,21 @@ export function PostCard({ posts, currPage, selectedCategory, pageSize }) {
     .slice((currPage - 1) * pageSize, currPage * pageSize);
   return (
     <>
-      <Link className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
         {filteredPosts.map((post) => (
-          <div
+          <Link
+            to={`/singlePost/${post.id}`}
             key={post.id}
             className="max-w-sm bg-white border border-gray-200 rounded-lg shadow-md dark:bg-gray-800 dark:border-gray-500 p-4 flex flex-col justify-between"
           >
             {/* Post Image */}
-            <a href="#">
+            <div>
               <img
                 className="w-full rounded-lg h-48 object-cover"
                 src={post.image}
                 alt={post.title}
               />
-            </a>
+            </div>
 
             {/* Post Content */}
             <div className="p-4 flex flex-col flex-grow">
@@ -32,11 +33,10 @@ export function PostCard({ posts, currPage, selectedCategory, pageSize }) {
               </div>
 
               {/* Post Title */}
-              <a href="#">
-                <h5 className="text-lg font-semibold text-gray-800 dark:text-gray-300 hover:underline ">
-                  {post.title}
-                </h5>
-              </a>
+
+              <h5 className="text-lg font-semibold text-gray-800 dark:text-gray-300 hover:text-blue-400 ">
+                {post.title}
+              </h5>
             </div>
 
             {/* Author Section */}
@@ -50,9 +50,9 @@ export function PostCard({ posts, currPage, selectedCategory, pageSize }) {
                 {post.author}
               </span>
             </div>
-          </div>
+          </Link>
         ))}
-      </Link>
+      </div>
     </>
   );
 }

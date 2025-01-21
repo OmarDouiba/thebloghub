@@ -16,14 +16,16 @@ export default function AllRoutes() {
     <Routes>
       <Route path="/" element={<HomePage />} />
       <Route path="dashbord" element={<Dashbord />} />
-      <Route path="signin" element={<UserAuthForm type={'sign-in'} />} />
       <Route path="writepost" element={<WritePost />} />
-      <Route path="/singlePost" element={<SinglePost />} />
-      <Route path="/singlePost/:id" element={<SinglePost />} />
-      <Route path="/about" element={<About />} />
-      <Route path="/contact" element={<Contact />} />
-      <Route path="/blog" element={<Blogs />} />
-      <Route path="signup" element={<UserAuthForm type={'sign-up'} />} />
+      <Route path="singlePost" element={<SinglePost />} />
+      <Route path="singlePost/:id" element={<SinglePost />} />
+      <Route path="about" element={<About />} />
+      <Route path="contact" element={<Contact />} />
+      <Route path="blog" element={<Blogs />} />
+      <Route path="signin" element={<UserAuthForm type="sign-in" />} />
+      <Route path="signup" element={<UserAuthForm type="sign-up" />} />
+      {/* Fallback Route for 404 */}
+      {/* <Route path="*" element={<NotFound />} /> */}
     </Routes>
   );
 }
