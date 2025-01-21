@@ -30,7 +30,7 @@ export function SinglePost() {
 
   return (
     <div className="py-10 px-5  dark:bg-gray-800 dark:text-white">
-      <div className="container mx-auto max-w-6xl">
+      <div className="container mx-auto max-w-5xl">
         <div className="flex justify-between my-3">
           <span className="text-white bg-blue-600  text-md font-normal px-2 py-1 rounded-md">
             {data.category}
@@ -181,11 +181,15 @@ export function SinglePost() {
           eligendi aliquid dolorem quis ratione illum hic rerum ex suscipit
           placeat nobis voluptatum vero. Molestias soluta dolores cumque?
         </p>
-        <div className="mt-8 space-x-2">
-          {data?.tags?.map((tag, index) => (
+        <div
+          className="mt-8 space-x-2 border-t-2 border-gray-300 pt-5"
+          role="list"
+        >
+          {data?.tags?.map((tag) => (
             <span
-              key={index}
+              key={tag.id || tag} 
               className="rounded-md bg-gray-200 text-black text-md font-semibold px-3 py-2"
+              role="listitem"
             >
               {tag}
             </span>
