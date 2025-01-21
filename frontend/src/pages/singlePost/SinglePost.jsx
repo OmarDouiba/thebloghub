@@ -57,12 +57,14 @@ export function SinglePost() {
           className="w-full h-96 my-10 rounded-lg"
           alt={data.title}
         />
-        <p className="text-lg text-gray-600 mt-4 text-start">{data.content}</p>
+        <p className="text-lg text-gray-600 dark:text-white  mt-4 text-start">
+          {data.content}
+        </p>
 
-        <h2 className="text-3xl font-bold text-gray-800 my-5">
+        <h2 className="text-3xl font-bold text-gray-800 dark:text-white my-5">
           lorem lorem lorem
         </h2>
-        <p className="text-lg text-gray-600 mt-4 text-start">
+        <p className="text-lg text-gray-600 dark:text-white mt-4 text-start">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam
           tenetur reiciendis asperiores! Nesciunt architecto at hic libero modi
           dolorem quas possimus placeat vitae doloribus consequuntur, aut
@@ -102,10 +104,10 @@ export function SinglePost() {
           placeat nobis voluptatum vero. Molestias soluta dolores cumque?
         </p>
 
-        <h2 className="text-3xl font-bold text-gray-800 my-5">
+        <h2 className="text-3xl font-bold text-gray-800 dark:text-white my-5">
           lorem lorem lorem
         </h2>
-        <p className="text-lg text-gray-600 mt-4 text-start">
+        <p className="text-lg text-gray-600 dark:text-white mt-4 text-start">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam
           tenetur reiciendis asperiores! Nesciunt architecto at hic libero modi
           dolorem quas possimus placeat vitae doloribus consequuntur, aut
@@ -145,10 +147,10 @@ export function SinglePost() {
           placeat nobis voluptatum vero. Molestias soluta dolores cumque?
         </p>
 
-        <h2 className="text-3xl font-bold text-gray-800 my-5">
+        <h2 className="text-3xl font-bold text-gray-800 dark:text-white my-5">
           lorem lorem lorem
         </h2>
-        <p className="text-text-lg text-gray-600 mt-4 text-start">
+        <p className="text-text-lg text-gray-600 dark:text-white mt-4 text-start">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam
           tenetur reiciendis asperiores! Nesciunt architecto at hic libero modi
           dolorem quas possimus placeat vitae doloribus consequuntur, aut

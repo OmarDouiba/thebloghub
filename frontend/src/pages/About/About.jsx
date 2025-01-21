@@ -10,21 +10,21 @@ export function About() {
             About Us
           </h2>
         </AnimationBorder>
-        <div className="container mx-auto max-w-4xl p-8">
-          <header className="text-center mb-16">
-            <h1 className="text-4xl font-semibold text-gray-800">
+        <div className="container mx-auto max-w-4xl p-8  ">
+          <header className="text-center mb-16 ">
+            <h1 className="text-4xl font-semibold text-gray-800 dark:text-white">
               Welcome to The Blog Hub
             </h1>
-            <p className="text-lg text-gray-600 mt-4">
+            <p className="text-lg text-gray-600 dark:text-white mt-4">
               A vibrant space where thoughts, ideas, and stories come alive!
             </p>
           </header>
 
           <section className="mb-16">
-            <h2 className="text-3xl text-start font-bold text-gray-800">
+            <h2 className="text-3xl text-start font-bold text-gray-800 dark:text-white">
               What We Do
             </h2>
-            <p className="text-lg text-gray-600 mt-4 text-start">
+            <p className="text-lg text-gray-600 mt-4 text-start dark:text-white">
               Our blog is a hub of diverse content, carefully curated to cater
               to readers from all walks of life. From personal growth and
               lifestyle tips to technology insights and global trends, we aim to
@@ -34,11 +34,11 @@ export function About() {
             </p>
           </section>
 
-          <section className="mb-16">
-            <h2 className="text-3xl text-start font-bold text-gray-800">
+          <section className="mb-16 ">
+            <h2 className="text-3xl text-start font-bold text-gray-800 dark:text-white">
               Our Vision
             </h2>
-            <p className="text-lg text-gray-600 mt-4 text-start">
+            <p className="text-lg text-gray-600 dark:text-white mt-4 text-start">
               We envision a world where information is accessible, ideas flow
               freely, and communities are built through shared experiences and
               knowledge. Our goal is to be a trusted destination where readers
@@ -48,10 +48,10 @@ export function About() {
           </section>
 
           <section className="mb-16">
-            <h2 className="text-3xl text-start font-bold text-gray-800">
+            <h2 className="text-3xl text-start font-bold text-gray-800 dark:text-white">
               Our Team
             </h2>
-            <p className="text-lg text-gray-600 mt-4 text-start">
+            <p className="text-lg text-gray-600 dark:text-white mt-4 text-start">
               Behind The Blog Hub is a passionate team of writers, editors, and
               creators dedicated to crafting engaging and thought-provoking
               articles. Each piece of content reflects our commitment to
@@ -62,10 +62,10 @@ export function About() {
           </section>
 
           <section className="mb-16">
-            <h2 className="text-3xl text-start font-bold text-gray-800">
+            <h2 className="text-3xl text-start font-bold dark:text-white text-gray-800">
               Why Choose Us?
             </h2>
-            <ul className="list-inside list-disc mt-4 text-lg text-gray-600 text-start">
+            <ul className="list-inside list-disc mt-4 text-lg text-gray-600 dark:text-white text-start">
               <li>
                 Quality Content: Our articles are written with care, offering
                 well-researched and insightful perspectives.
@@ -86,15 +86,17 @@ export function About() {
           </section>
 
           <section className="text-start mt-16">
-            <h2 className="text-3xl font-bold text-gray-800">Join Us</h2>
-            <p className="text-lg text-gray-600 mt-4 text-start">
+            <h2 className="text-3xl font-bold text-gray-800 dark:text-white">
+              Join Us
+            </h2>
+            <p className="text-lg text-gray-600 dark:text-white mt-4 text-start">
               At The Blog Hub, we don’t just want you to read; we want you to be
               part of the journey. Share your thoughts, engage with our content,
               and feel free to contribute if you have a story to tell or
               expertise to share. Together, we can make The Blog Hub a thriving
               space for creativity and connection.
             </p>
-            <p className="text-lg text-gray-600 mt-4">
+            <p className="text-lg text-gray-600 dark:text-white mt-4">
               Thank you for being here. Let’s explore, learn, and grow together!
             </p>
           </section>
