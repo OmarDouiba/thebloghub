@@ -40,14 +40,14 @@ export function PostsPage() {
 
   return (
     <div className="sm:flex py-5">
-      <div className="pb-5 pr-5">
+      <div className="pb-5 mx-5">
         <CategorySelection
           onSelectCategory={handleCategoryChange}
           selectedCategory={selectedCategory}
           activeCategory={activeCategory}
         />
       </div>
-      <div className="flex items-center flex-col">
+      <div className="flex items-center flex-col mx-5">
         <div>
           <PostCard
             posts={posts}

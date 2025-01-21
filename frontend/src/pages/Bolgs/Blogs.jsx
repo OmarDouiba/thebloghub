@@ -12,7 +12,7 @@ export function Blogs() {
           </h2>
         </AnimationBorder>
       </div>
-      <div className="container mx-auto max-w-5xl">
+      <div className="container mx-auto max-w-7xl">
         <div className="py-10 ">
           <PostsPage />
         </div>
